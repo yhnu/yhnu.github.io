@@ -1,4 +1,4 @@
-baseURL = "https://example.com/"
+baseURL = "https://yhnu.github.io/"
 title = "GitHub Style"
 googleAnalytics = "UA-123-456-789"
 theme = "github-style"
