@@ -25,11 +25,11 @@ jobs:
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         PUBLISH_BRANCH: master
-        PUBLISH_DIR: .
+        PUBLISH_DIR: ./public
         # PUBLISH_DIR: ./public
         SCRIPT_MODE: true
       run: |
-        # wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2/entrypoint.sh
+        wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2/entrypoint.sh
         chmod +x entrypoint.sh
         bash ./entrypoint.sh
 
