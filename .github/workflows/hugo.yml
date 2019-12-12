@@ -19,8 +19,6 @@ jobs:
     
     - name: Build
       run: |
-        hugo new site yhnublog
-        cd yhnublog                
         hugo --minify
 
     - name: Deploy
