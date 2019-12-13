@@ -1,61 +1,70 @@
 ---
-title: "Hello Hugo!"
+title: "aboutme"
 description: "Saying 'Hello' from Hugo"
-date: "2014-09-01"
+date: "2019-12-13"
 categories:
-  - "example"
-  - "hello"
+  - "introduction"
+  - "aboutme"
 tags:
-  - "example"
-  - "hugo"
+  - "introduction"
   - "blog"
 ---
 
-Hello from Hugo! If you're reading this in your browser, good job! The file `content/post/hello-hugo.md` has been
-converted into a complete HTML document by Hugo. Isn't that pretty nifty?
-
-A Section
+why yhnu?
 ---------
 
-Here's a simple titled section where you can place whatever information you want.
+i'm a vim user, just like hjkl very effectly. i want to type less so named with yhnu
 
-You can use inline HTML if you want, but really there's not much that Markdown can't do.
+about me
+---------
 
-Showing off with Markdown
+just a worker like you
+
 -------------------------
 
-A full cheat sheet can be found [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-or through [Google](https://google.com/).
+**1. 时隔7年,回头探望才觉自己就是那个<钱钟书>笔下的那个方鸿渐.**
 
-There are some *easy* examples for styling, though. I can't **emphasize** that enough.
-Creating [links](https://google.com/) or `inline code` blocks are very straightforward.
+在大学就读期间,在我哥哥的帮助下我比其他同龄人提早学习了一年的计算机相关的知识.这给我在大学期间意气风发,狠狠的提供了一笔不小
+的资本.
+
+2009年, 大学第一年,我获得了每科的都是优的成绩,拿到了国家奖学金
+2010年, 大学第二年,在其他人还在学习<<电路>>等基础知识的时候,我已经开启去参加<<全国电子设计大赛>>
+2011年, 大学第三年,在丰富自己的学识之余,只要是有电子相关的领域的竞赛,我都会和队员一起参加
+2012年, 大学第四年,已更加纯熟的经验,第二次参加<<全国电子设计大赛>>
+
+在校期间,我参加了很多的比赛,为老师和学校争取了一些荣誉;任何一门领域的知识都是浩瀚的,因此我大学4年基本翻遍了图书馆内所有的电子
+领域相关的书籍,同时我哥哥也会把市面上使用的一些技术在暑假的时候传授于我.
+
+智慧之眼的快速生根发芽并茁壮成长,像一辆飞驰的火车碾压而过.让我活得顺风顺水,因此我满心以为我毕业后通过我的学识一定能获得好的工作
+于是我愚昧的放弃了那些所谓的大学考研的想法.
+
+**2. 在求职的道路上,智慧之眼失效了??**
+
+2012年10月, 我便满怀信心的开启了自己的求职之路
+
+最初,我在招聘网站上投递了自己的简历,目的只想试试自己到底值多少钱?
+可这终究归于失败了,因为他们只想要一个努力工作但不要工资的大学生罢了
+
+2012年12月, 我参加了很多次校招笔试
+
+OH MY GOD,我发现自己碰壁了,面试题目刁钻得要命,我写的代码也从来没这么难过.简单一句话,那些题目并不是为了实际工程经验而诞生,现在看来
+只不过是面试官在那里秀秀技术,茴香豆的茴字有多少种写法罢了.
+
+2013年1月, 碰壁回炉重造一个月
+
+有的人专门写了本书专门讲述了茴香豆的茴字有多少种写法.这本书名字叫<<程序员面试宝典>>. 拿着这本书我踏入了后面所有企业的面试环节~但是我
+迄今都不知道这本书的真正的意义是什么.
+
+后续更多精彩, 快吃饭了.先更新到此.....
 
 ```
-There are some *easy* examples for styling, though. I can't **emphasize** that enough.
-Creating [links](https://google.com/) or `inline code` blocks are very straightforward.
-```
 
-Front Matter for Fun
---------------------
 
-This is the meta data for this post. It is located at the top of the `content/post/hello-hugo.md` markdown file.
 
-```
----
-title: "Hello Hugo!"
-description: "Saying 'Hello' from Hugo"
-date: "2014-09-01"
-categories:
-  - "example"
-  - "hello"
-tags:
-  - "example"
-  - "hugo"
-  - "blog"
----
-```
+work history
+---------
+2013~2014 搜狐畅游科技有限公司
 
-This section, called 'Front Matter', is what tells Hugo about the content in this file: the `title` of the item, the
-`description`, and the `date` it was posted. In our example, we've added two custom bits of data too. The `categories` and
-`tags` sections are used in this example for indexing/grouping content. You will learn more about what that means by
-examining the code in this example and through reading the Hugo [documentation](http://gohugo.io/overview/introduction).
+2015~2018 深圳腾讯科技有限公司
+
+2018~now  珠海金山科技有限公司
