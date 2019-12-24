@@ -13,9 +13,8 @@ tags:
 ---
 ios instruments 相关知识点
 
-
-```shell
-instruments相关的service
+# 0x01 instruments相关的service
+```xml
 <string>com.apple.instruments.server.services.processcontrolbydictionary</string>
 <string>com.apple.instruments.server.services.graphics.coreanimation.immediate</string>
 <string>com.apple.instruments.server.services.assets</string>
