@@ -11,8 +11,9 @@ tags:
   - "IOS"
   - "Game Develop"
 ---
+ios instruments 相关知识点
 
-# 2019年12月
+
 ```shell
 instruments相关的service
 <string>com.apple.instruments.server.services.processcontrolbydictionary</string>
