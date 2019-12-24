@@ -11,7 +11,9 @@ tags:
   - "IOS"
   - "Game Develop"
 ---
-ios instruments 相关知识点
+> ios instruments 相关学习
+
+<!--more-->
 
 # 0x01 instruments相关的service
 ```xml

@@ -12,7 +12,8 @@ tags:
   - "Auto Change Port"  
 ---
 
-Outline 是ShadowSock的跨平台产品
+> Outline ShadowSock Client
+<!--more-->
 
 # 0x01: 下载地址
 
