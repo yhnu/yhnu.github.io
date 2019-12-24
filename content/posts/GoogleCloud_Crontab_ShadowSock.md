@@ -14,7 +14,7 @@ tags:
 
 Outline 是ShadowSock的跨平台产品
 
-0x01: 下载地址
+# 0x01: 下载地址
 
 ```shell
 https://github.com/Jigsaw-Code/outline-client.git
