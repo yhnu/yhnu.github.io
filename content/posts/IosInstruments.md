@@ -15,7 +15,7 @@ tags:
 
 <!--more-->
 
-# 0x01 instruments相关的service
+## 0x01 instruments相关的service
 ```xml
 <string>com.apple.instruments.server.services.processcontrolbydictionary</string>
 <string>com.apple.instruments.server.services.graphics.coreanimation.immediate</string>
@@ -105,3 +105,8 @@ tags:
 <string>com.apple.instruments.server.services.fsusage</string>
 <string>com.apple.instruments.server.services.power</string>
 ```
+##0x02 XCode如何与Instrucment通信的原理
+
+[Discovering_the_iOS_Instruments_Server](https://recon.cx/2018/montreal/schedule/system/event_attachments/attachments/000/000/043/original/RECON-MTL-2018-Discovering_the_iOS_Instruments_Server.pdf)
+
+> 注意: 对应的库编译需要使用IDA7.1,参考链接
