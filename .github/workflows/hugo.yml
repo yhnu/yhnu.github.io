@@ -36,4 +36,4 @@ jobs:
       run: |
         chmod +x ./qiniu/qshell
         ./qiniu/qshell account e48-XlFoDI86AmRWBvmPyUXQGGQUsNIHVz2t7RkH uv7scH4ABVPQCh_8rVabeTW3S6Q74GPoiuhzkJtf 7niu
-        ./qiniu/qshell qupload -C ./qiniu/sync.conf
+        ./qiniu/qshell qupload ./qiniu/sync.conf
