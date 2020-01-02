@@ -22,8 +22,6 @@ tags:
 
 ### 0x02:  Github Action
 
-![image-20200102112235585](image-20200102112235585.png)
-
 ```yaml
 - name: 7Niu
       run: |

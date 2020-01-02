@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GitHub Style</title>
-    <link>http://q3gke9sy1.bkt.clouddn.com/</link>
+    <link>http://q3gssxz29.bkt.clouddn.com/</link>
     <description>Recent content on GitHub Style</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 31 Dec 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://q3gke9sy1.bkt.clouddn.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://q3gssxz29.bkt.clouddn.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Unity3D Dictionary Memory Leak</title>
-      <link>http://q3gke9sy1.bkt.clouddn.com/posts/unity3d_android_memleak/</link>
+      <link>http://q3gssxz29.bkt.clouddn.com/posts/unity3d_android_memleak/</link>
       <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://q3gke9sy1.bkt.clouddn.com/posts/unity3d_android_memleak/</guid>
+      <guid>http://q3gssxz29.bkt.clouddn.com/posts/unity3d_android_memleak/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Unity3D构建32位安卓应用,使用Dictionary会产生内存泄漏&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -23,10 +23,10 @@
     
     <item>
       <title>Hugo themes</title>
-      <link>http://q3gke9sy1.bkt.clouddn.com/posts/hugo_themes/</link>
+      <link>http://q3gssxz29.bkt.clouddn.com/posts/hugo_themes/</link>
       <pubDate>Tue, 24 Dec 2019 16:36:44 +0800</pubDate>
       
-      <guid>http://q3gke9sy1.bkt.clouddn.com/posts/hugo_themes/</guid>
+      <guid>http://q3gssxz29.bkt.clouddn.com/posts/hugo_themes/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;my hugo themes&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -34,10 +34,10 @@
     
     <item>
       <title>aboutme</title>
-      <link>http://q3gke9sy1.bkt.clouddn.com/about/</link>
+      <link>http://q3gssxz29.bkt.clouddn.com/about/</link>
       <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://q3gke9sy1.bkt.clouddn.com/about/</guid>
+      <guid>http://q3gssxz29.bkt.clouddn.com/about/</guid>
       <description>why yhnu? i&#39;m a vim user, just like hjkl very effectly. i want to type less so named with yhnu
 about me just a worker like you
 1. 时隔7年,回头探望才觉自己就是那个&amp;lt;钱钟书&amp;gt;笔下的那个方鸿渐.
@@ -60,10 +60,10 @@ work history 2013~2014 搜狐畅游科技有限公司
     
     <item>
       <title>How Unity3D Texture Upload To GPU Rendering</title>
-      <link>http://q3gke9sy1.bkt.clouddn.com/posts/unity3diostexture/</link>
+      <link>http://q3gssxz29.bkt.clouddn.com/posts/unity3diostexture/</link>
       <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://q3gke9sy1.bkt.clouddn.com/posts/unity3diostexture/</guid>
+      <guid>http://q3gssxz29.bkt.clouddn.com/posts/unity3diostexture/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;ios unity3d texture note&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -71,10 +71,10 @@ work history 2013~2014 搜狐畅游科技有限公司
     
     <item>
       <title>Ios Instruments Note</title>
-      <link>http://q3gke9sy1.bkt.clouddn.com/posts/iosinstruments/</link>
+      <link>http://q3gssxz29.bkt.clouddn.com/posts/iosinstruments/</link>
       <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://q3gke9sy1.bkt.clouddn.com/posts/iosinstruments/</guid>
+      <guid>http://q3gssxz29.bkt.clouddn.com/posts/iosinstruments/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;ios instruments note&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -82,12 +82,23 @@ work history 2013~2014 搜狐畅游科技有限公司
     
     <item>
       <title>在GoogleCloud上部署ShadowSock服务</title>
-      <link>http://q3gke9sy1.bkt.clouddn.com/posts/googlecloud_crontab_shadowsock/</link>
+      <link>http://q3gssxz29.bkt.clouddn.com/posts/googlecloud_crontab_shadowsock/</link>
       <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://q3gke9sy1.bkt.clouddn.com/posts/googlecloud_crontab_shadowsock/</guid>
+      <guid>http://q3gssxz29.bkt.clouddn.com/posts/googlecloud_crontab_shadowsock/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Outline ShadowSock Client&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何使用7牛云同步博客</title>
+      <link>http://q3gssxz29.bkt.clouddn.com/posts/blog_7niusync/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://q3gssxz29.bkt.clouddn.com/posts/blog_7niusync/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;使用7牛云进行Blog同步&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     
