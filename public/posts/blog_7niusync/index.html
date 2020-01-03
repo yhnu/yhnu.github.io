@@ -122,7 +122,7 @@ if (!doNotTrack) {
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                277 Words
+                                279 Words
                                 
                             </div>
                         </div>
@@ -159,9 +159,10 @@ sed <span style="color:#e6db74">&#39;s;&#34;.*/image;&#34;image;&#39;</span> ind
 <span style="color:#75715e"># 目录查找替换</span>
 grep -rl <span style="color:#e6db74">&#39;&#34;.*/image&#39;</span> public | xargs sed -i <span style="color:#e6db74">&#39;s;&#34;.*/image;&#34;image;g&#39;</span>
 find public -type f -exec sed -i -e <span style="color:#e6db74">&#39;s;&#34;.*/image;&#34;image;g&#39;</span>
-</code></pre></div><p>0x07:一条命令搞定它</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo <span style="color:#f92672">&amp;&amp;</span> grep -rl <span style="color:#e6db74">&#39;&#34;.*/image-&#39;</span> public/posts/ | xargs sed -i <span style="color:#e6db74">&#39;s;&#34;.*/image;&#34;image;g&#39;</span> <span style="color:#f92672">&amp;&amp;</span> rm -rf .qshell/qupload <span style="color:#f92672">&amp;&amp;</span> ./qiniu/qshell.exe qupload sync.conf -L
-</code></pre></div></article>
+</code></pre></div><h3 id="0x07">0x07:一条命令搞定它</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo <span style="color:#f92672">&amp;&amp;</span> grep -rl <span style="color:#e6db74">&#39;src=&#34;.*/image-&#39;</span> public/posts/ | xargs sed -i <span style="color:#e6db74">&#39;s;src=&#34;.*/image-;&#34;image-;g&#39;</span> <span style="color:#f92672">&amp;&amp;</span> rm -rf .qshell/qupload <span style="color:#f92672">&amp;&amp;</span> ./qiniu/qshell.exe qupload sync.conf -L
+</code></pre></div><h3 id="links">links:</h3>
+<p><a href="https://stackoverflow.com/questions/6758963/find-and-replace-with-sed-in-directory-and-sub-directories">https://stackoverflow.com/questions/6758963/find-and-replace-with-sed-in-directory-and-sub-directories</a></p></article>
                         </div>
                     </div>
                 </div>

@@ -20,21 +20,25 @@ jobs:
     - name: Build
       run: |
         hugo --minify
-
-    # - name: Deploy
-    #   env:
-    #     ACTIONS_DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
-    #     PUBLISH_BRANCH: master
-    #     PUBLISH_DIR: ./public
-    #     # PUBLISH_DIR: ./public
-    #     SCRIPT_MODE: true
-    #   run: |
-    #     wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2/entrypoint.sh
-    #     chmod +x entrypoint.sh
-    #     bash ./entrypoint.sh
-    - name: 7Niu
+    
+    - name: FixImage
       run: |
-        chmod +x ./qiniu/qshell
-        ./qiniu/qshell account e48-XlFoDI86AmRWBvmPyUXQGGQUsNIHVz2t7RkH uv7scH4ABVPQCh_8rVabeTW3S6Q74GPoiuhzkJtf 7niu
-        ./qiniu/qshell qupload sync.conf -c 20
+        grep -rl 'src=".*/image-' public/posts/ | xargs sed -i 's;src=".*/image-;src="image-;g'
+    - name: Deploy
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        PUBLISH_BRANCH: master
+        PUBLISH_DIR: ./public
+        # PUBLISH_DIR: ./public
+        SCRIPT_MODE: true
+      run: |
+        wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2/entrypoint.sh
+        chmod +x entrypoint.sh
+        bash ./entrypoint.sh
+
+    # - name: 7Niu
+    #   run: |
+    #     chmod +x ./qiniu/qshell
+    #     ./qiniu/qshell account e48-XlFoDI86AmRWBvmPyUXQGGQUsNIHVz2t7RkH uv7scH4ABVPQCh_8rVabeTW3S6Q74GPoiuhzkJtf 7niu
+    #     ./qiniu/qshell qupload sync.conf -c 20
         

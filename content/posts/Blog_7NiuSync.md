@@ -65,9 +65,12 @@ grep -rl '".*/image' public | xargs sed -i 's;".*/image;"image;g'
 find public -type f -exec sed -i -e 's;".*/image;"image;g'
 ```
 
-0x07:一条命令搞定它
+### 0x07:一条命令搞定它
 
 ```shell
-hugo && grep -rl '".*/image-' public/posts/ | xargs sed -i 's;".*/image;"image;g' && rm -rf .qshell/qupload && ./qiniu/qshell.exe qupload sync.conf -L
+hugo && grep -rl 'src=".*/image-' public/posts/ | xargs sed -i 's;src=".*/image-;"image-;g' && rm -rf .qshell/qupload && ./qiniu/qshell.exe qupload sync.conf -L
 ```
 
+### links:
+
+https://stackoverflow.com/questions/6758963/find-and-replace-with-sed-in-directory-and-sub-directories
