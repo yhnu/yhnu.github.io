@@ -23,6 +23,7 @@ jobs:
     
     - name: FixImage
       run: |
+        ls -l
         grep -rl 'src=".*/image-' public/posts/ | xargs sed -i 's;src=".*/image-;src="image-;g'
     - name: Deploy
       env:
