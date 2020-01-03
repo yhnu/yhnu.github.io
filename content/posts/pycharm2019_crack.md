@@ -21,7 +21,7 @@ tags:
 
 ### 0x02 将`jetbrains-agent.jar`放置到Pycharm安装目录的bin目录下
 
-![image-20200103152952397](pycharm_crack/image-20200103152952397-1578044816388.png)
+![image-20200103152952397](pycharm2019_crack/image-20200103152952397-1578044816388.png)
 
 ### 0x03 修改`xx.vmoptions` 文件，加上 `-javaagent:C:\Program Files\JetBrains\PyCharm 2019.1.1\bin\jetbrains-agent.jar`
 
