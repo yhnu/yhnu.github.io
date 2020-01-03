@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game Develop on GitHub Style</title>
+    <link>http://blog.alphaz.cn/categories/game-develop/</link>
+    <description>Recent content in Game Develop on GitHub Style</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 31 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.alphaz.cn/categories/game-develop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Unity3D Dictionary Memory Leak</title>
+      <link>http://blog.alphaz.cn/posts/unity3d_android_memleak/</link>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/posts/unity3d_android_memleak/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Unity3D构建32位安卓应用,使用Dictionary会产生内存泄漏&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>How Unity3D Texture Upload To GPU Rendering</title>
+      <link>http://blog.alphaz.cn/posts/unity3diostexture/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/posts/unity3diostexture/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;ios unity3d texture note&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ios Instruments Note</title>
+      <link>http://blog.alphaz.cn/posts/iosinstruments/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/posts/iosinstruments/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;ios instruments note&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

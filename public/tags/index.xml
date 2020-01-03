@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on GitHub Style</title>
+    <link>http://blog.alphaz.cn/tags/</link>
+    <description>Recent content in Tags on GitHub Style</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 31 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.alphaz.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android</title>
+      <link>http://blog.alphaz.cn/tags/android/</link>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Game Develop</title>
+      <link>http://blog.alphaz.cn/tags/game-develop/</link>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/tags/game-develop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unity3d</title>
+      <link>http://blog.alphaz.cn/tags/unity3d/</link>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/tags/unity3d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Auto Change Port</title>
+      <link>http://blog.alphaz.cn/tags/auto-change-port/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/tags/auto-change-port/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>http://blog.alphaz.cn/tags/blog/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GoogleCloud</title>
+      <link>http://blog.alphaz.cn/tags/googlecloud/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/tags/googlecloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>introduction</title>
+      <link>http://blog.alphaz.cn/tags/introduction/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/tags/introduction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IOS</title>
+      <link>http://blog.alphaz.cn/tags/ios/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ShadowSock</title>
+      <link>http://blog.alphaz.cn/tags/shadowsock/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/tags/shadowsock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>7牛</title>
+      <link>http://blog.alphaz.cn/tags/7%E7%89%9B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/tags/7%E7%89%9B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>http://blog.alphaz.cn/tags/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PyCharm</title>
+      <link>http://blog.alphaz.cn/tags/pycharm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/tags/pycharm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://blog.alphaz.cn/tags/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/tags/python/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

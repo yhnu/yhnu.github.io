@@ -45,11 +45,29 @@ tags:
 ```shell
 # 上传
 $ hugo && ./qiniu/qshell.exe qupload sync.conf
+# 本地上传
+$ rm -rf .qshell/qupload/ && hugo && ./qiniu/qshell.exe qupload sync.conf -L
 ```
 
 ### 0x05:刷新CDN
 
 ```shell
 $ ./qiniu/qshell.exe cdnrefresh -i file.list
+```
+
+### 0x06:fix图片路径
+
+```shell
+# 使用typora编辑器
+sed 's;".*/image;"image;' index.html -i
+# 目录查找替换
+grep -rl '".*/image' public | xargs sed -i 's;".*/image;"image;g'
+find public -type f -exec sed -i -e 's;".*/image;"image;g'
+```
+
+0x07:一条命令搞定它
+
+```shell
+hugo && grep -rl '".*/image-' public/posts/ | xargs sed -i 's;".*/image;"image;g' && rm -rf .qshell/qupload && ./qiniu/qshell.exe qupload sync.conf -L
 ```
 

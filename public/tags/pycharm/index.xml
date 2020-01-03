@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PyCharm on GitHub Style</title>
+    <link>http://blog.alphaz.cn/tags/pycharm/</link>
+    <description>Recent content in PyCharm on GitHub Style</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="http://blog.alphaz.cn/tags/pycharm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PyCharm 2019.1.1 破解</title>
+      <link>http://blog.alphaz.cn/posts/pycharm_crack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.alphaz.cn/posts/pycharm_crack/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Python 环境搭建&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
