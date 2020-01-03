@@ -1,11 +1,11 @@
-baseURL = "http://yhnu.github.io/"
+baseURL = "http://blog.alphaz.cn/"
 title = "GitHub Style"
 googleAnalytics = "UA-123-456-789"
 theme = "github-style"
 
 [params]
   author = "yhnu"
-  description = "yhnu's blog"
+  description = "一些杂记"
   github = "yhnu"
   twitter = "yhnu"
   email = "immb@qq.com"
