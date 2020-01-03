@@ -19,11 +19,11 @@ jobs:
     
     - name: Build
       run: |
+        sed -i 's;baseURL = "http://blog.alphaz.cn/";baseURL = "http://yhnu.github.io/";g' config.toml
         hugo
     
     - name: FixImage
       run: |
-        ls -l
         grep -rl 'src=".*/image-' public/ | xargs sed -i 's;src=".*/image-;src="image-;g'
     - name: Deploy
       env:
