@@ -40,3 +40,16 @@ tags:
 }
 ```
 
+### 0x04: 手动编译并上传
+
+```shell
+# 上传
+$ hugo && ./qiniu/qshell.exe qupload sync.conf
+```
+
+### 0x05:刷新CDN
+
+```shell
+$ ./qiniu/qshell.exe cdnrefresh -i file.list
+```
+
