@@ -61,14 +61,14 @@ $ ./qiniu/qshell.exe cdnrefresh -i file.list
 # 使用typora编辑器
 sed 's;".*/image;"image;' index.html -i
 # 目录查找替换
-grep -rl '".*/image' public | xargs sed -i 's;".*/image;"image;g'
+grep -rl 'src=".*/image-' public/posts/ | xargs sed -i 's;src=".*/image-;src="image-;g'
 find public -type f -exec sed -i -e 's;".*/image;"image;g'
 ```
 
 ### 0x07:一条命令搞定它
 
 ```shell
-hugo && grep -rl 'src=".*/image-' public/posts/ | xargs sed -i 's;src=".*/image-;"image-;g' && rm -rf .qshell/qupload && ./qiniu/qshell.exe qupload sync.conf -L
+hugo && grep -rl 'src=".*/image-' public/posts/ | xargs sed -i 's;src=".*/image-;src="image-;g' && rm -rf .qshell/qupload && ./qiniu/qshell.exe qupload sync.conf -L
 ```
 
 ### links:
