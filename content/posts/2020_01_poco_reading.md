@@ -16,6 +16,10 @@ tags:
 > Poco源码阅读,理想很丰满,现实很骨感.
 > <!--more-->
 
-0x01. note
+0x01. 构建相关
 
-![image-20200103173717763](2020_01_poco_reading/image-20200103173717763.png)
+1. artifacts,build目录可以删除
+
+2. Projects/VisualStudio/.vs可以删除
+
+   
