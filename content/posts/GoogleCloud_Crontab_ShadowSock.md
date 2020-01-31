@@ -69,7 +69,7 @@ killall ss-server && port=`date +"%m%d"` && /var/lib/snapd/snap/bin/shadowsocks-
 ```
 ```shell
 #filename: ss.sh
-killall ss-server && port=`date +"%m%d"` && /opt/brook11.bin ssserver --listen 0.0.0.0:1$port  --password 2020$port > /var/log/libev_2019$port.log  2>&1 &
+killall brook11.bin && port=`date +"%m%d"` && /opt/brook11.bin ssserver --listen 0.0.0.0:1$port  --password 2020$port > /var/log/libev_2019$port.log  2>&1 &
 ```
 
 ```shell
