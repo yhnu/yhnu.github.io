@@ -20,6 +20,16 @@ categories:
 <% } %>
 ```
 
+### 插件编写
+> https://github.com/dailyrandomphoto/hexo-unique-post-path
+> https://hexo.io/plugins/
+
+### 多标签
+![](/2020_02_25_hexo-bo-ke-da-jian/20200226125747239.png)
+
 ### 附录
-[HexoEditor](https://github.com/zhuzhuyule/HexoEditor)
-[https://moeditor.js.org/](https://moeditor.js.org/)
+>[HexoEditor](https://github.com/zhuzhuyule/HexoEditor)
+>[https://moeditor.js.org/](https://moeditor.js.org/)
+>[https://sulin.me/2019/Z726F8.html](https://sulin.me/2019/Z726F8.html)
+>[https://github.com/cometlj/hexo-translate-title](https://github.com/cometlj/hexo-translate-title)
+>https://github.com/viko16/hexo-permalink-pinyin

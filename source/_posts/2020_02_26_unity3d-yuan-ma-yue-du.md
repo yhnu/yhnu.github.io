@@ -2,9 +2,7 @@
 title: Unity3d源码阅读
 description: Unity3d源码阅读
 date: 2020-02-26 00:06:42
-tags: 
-    Unity3D
-    AutoTest
+tags:  [Unity3D, AutoTest]
 categories: 博客
 ---
 
