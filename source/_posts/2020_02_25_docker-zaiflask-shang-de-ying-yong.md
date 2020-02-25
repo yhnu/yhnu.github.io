@@ -43,5 +43,22 @@ $ sudo docker run -p 127.0.0.1::8080 <image> <cmd> # Bind TCP port 8080 of the c
 # Bind UDP port 5353 of the container to UDP port 53 on 127.0.0.1 of the host machine. $ sudo docker run -p 127.0.0.1:53:5353/udp <image> <cmd>
 ```
 
+### Alpine安装GCC,使Gevent编译不报错
+```Docker
+  RUN apk add --no-cache --virtual .build-deps gcc musl-dev \
+     && pip install cython \
+     && apk del .build-deps gcc musl-dev
+```
+
+> [https://www.iwecon.cc/2019/160.html](https://www.iwecon.cc/2019/160.html)
+
+### 查看Python3对应的Image列表
+
+> https://hub.docker.com/_/python
+
+
+
 ### 附录
 [http://www.docker.org.cn/dockerppt/110.html](http://www.docker.org.cn/dockerppt/110.html)
+[https://github.com/docker-library/python/issues/318](https://github.com/docker-library/python/issues/318)
+[https://www.theodoresi.top/blog/docker/deploy-a-flask-app-in-docker](https://www.theodoresi.top/blog/docker/deploy-a-flask-app-in-docker)
