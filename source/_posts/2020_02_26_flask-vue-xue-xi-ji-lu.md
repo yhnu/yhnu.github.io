@@ -9,6 +9,8 @@ categories:
 ### Flask上传文件
 > https://dormousehole.readthedocs.io/en/latest/patterns/fileuploads.html
 
+### Pipenv使用
+> https://zhuanlan.zhihu.com/p/37581807
 
 ### 有用的链接
 https://blog.csdn.net/wangdandan01/article/details/103478357
