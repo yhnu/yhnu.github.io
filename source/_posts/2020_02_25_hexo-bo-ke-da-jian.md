@@ -30,6 +30,23 @@ categories:
 ### 评论插件
 > https://blog.csdn.net/death05/article/details/83618887
 
+### 最新文章
+```js
+<% if (site.posts.length){ %>
+  <div class="widget-wrap">
+    <h3 class="widget-title"><%= __('recent_posts') %></h3>
+    <div class="widget">
+      <ul>
+        <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+          <li>
+            <a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+<% } %>
+```
 ### 附录
 >[HexoEditor](https://github.com/zhuzhuyule/HexoEditor)
 >[https://moeditor.js.org/](https://moeditor.js.org/)
