@@ -18,7 +18,7 @@ description:
 > -v /mnt/nfs/:/zhuhaiyan
 
 **注意:Docker容器内不要创建此目录,否则映射不成功**
-![](/2020_02_25_docker-zaiflask-shang-de-ying-yong/20200225114255074.png)
+![](http://q68vqxb8c.bkt.clouddn.com/2020_02_25_docker-zaiflask-shang-de-ying-yong/20200225114255074.png)
 
 ### 0x03 Docker容器命名
 **--name apktool不能放在最后,最后必须为一个参数为Image的名称。**
@@ -56,7 +56,31 @@ $ sudo docker run -p 127.0.0.1::8080 <image> <cmd> # Bind TCP port 8080 of the c
 
 > https://hub.docker.com/_/python
 
+### 使用Makefile快速构建和运行Docker
+```makefile
+default: rebuild
 
+build:
+	sudo docker build -t "apktool" .
+
+rebuild:
+	sudo docker image rm -f apktool
+	sudo docker container rm apktool
+	sudo docker build -t "apktool" .
+
+run:
+	sudo docker run -d  -v /work/appkmonitor/files:/opt/app/files -p 8888:8888 --name apktool apktool
+
+stop:
+	sudo docker stop apktool
+
+shell:
+	docker exec -it apktool ash
+```
+### Docker删除none Image
+```shell
+docker rmi $(docker images --filter "dangling=true" -q)
+```
 
 ### 附录
 [http://www.docker.org.cn/dockerppt/110.html](http://www.docker.org.cn/dockerppt/110.html)
