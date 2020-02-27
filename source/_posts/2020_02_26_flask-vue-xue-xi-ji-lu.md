@@ -52,5 +52,14 @@ loglevel = ‘debug’ #日志等级
 ### Pipenv使用
 > https://zhuanlan.zhihu.com/p/37581807
 
+### Flask 返回数据去掉_id
+> https://stackoverflow.com/questions/12345387/removing-id-element-from-pymongo-results
+
+To exclude the _id field in a find query in pymongo, you can use:
+```python
+db.collection.find({}, {'_id': False})
+```
+The documentation is somewhat missleading on this as it says the _id field is always included. But you can exclude it like shown above.
+
 ### 有用的链接
 https://blog.csdn.net/wangdandan01/article/details/103478357
