@@ -49,4 +49,5 @@ curl -H "Content-Type:application/json" -X POST --data "{\"tag\":\"tgac_trunk\",
 使用如下命令
 ```shell
 curl -H "Content-Type:application/json" -X POST --data "{\"tag\":\"tgac_trunk\",\"buildnumber\":103}" http://10.11.67.39:7777/assetstop
+
 ```

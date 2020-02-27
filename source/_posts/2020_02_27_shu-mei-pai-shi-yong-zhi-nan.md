@@ -60,4 +60,3 @@ sudo diskutil eraseDisk FAT32 RASPBIAN MBRFormat /dev/disk2
 
 
 
-

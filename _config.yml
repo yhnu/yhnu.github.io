@@ -85,7 +85,8 @@ disqus: # DISQUS ID
 location: Hong Kong
 email: immb@qq.com
 
-avatar: https://avatars2.githubusercontent.com/u/5300359?v=4&s=460
+avatar: http://q68vqxb8c.bkt.clouddn.com/2020_02_27_shu-mei-pai-shi-yong-zhi-nan/20200228122216265.png
+# https://avatars2.githubusercontent.com/u/5300359?v=4&s=460
 social:
   github: https://github.com/yhnu
   weibo: http://weibo.com/206663121
@@ -107,3 +108,21 @@ translate_title:
   proxy_url: http://localhost:50018 # Your proxy_url
   baidu_appid: '' # Your baidu_appid
   baidu_appkey: '' # Your baidu_appkey
+
+gitalk:
+  enable: true
+  ClientID: fd02d66fb0bc52bdd7db
+  ClientSecret: c00e8d42eaf7f9c05386740c122a3c995c2e038d
+  repo: yhnu.github.io
+  owner: yhnu
+  labels: gitalk
+  perPage: 15
+  pagerDirection: last
+  createIssueManually: true
+  distractionFreeMode: true
+
+deploy:
+  type: git
+  repo: https://github.com/yhnu/yhnu.github.io #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: [master]
+  message: 'auto commit'

@@ -27,6 +27,9 @@ categories:
 ### 多标签
 ![](/2020_02_25_hexo-bo-ke-da-jian/20200226125747239.png)
 
+### 评论插件
+> https://blog.csdn.net/death05/article/details/83618887
+
 ### 附录
 >[HexoEditor](https://github.com/zhuzhuyule/HexoEditor)
 >[https://moeditor.js.org/](https://moeditor.js.org/)
