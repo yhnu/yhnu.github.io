@@ -1,5 +1,5 @@
 <%
-var posts = page.posts.data;
+var posts = page.posts.sort('updated', -1).data;
 var nav_selected = page.path.split('/')[0];
 %>
 

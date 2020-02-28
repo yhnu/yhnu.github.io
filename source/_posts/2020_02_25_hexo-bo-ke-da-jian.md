@@ -37,7 +37,7 @@ categories:
     <h3 class="widget-title"><%= __('recent_posts') %></h3>
     <div class="widget">
       <ul>
-        <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+        <% site.posts.sort('updated', -1).limit(5).each(function(post){ %>
           <li>
             <a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
           </li>
@@ -47,6 +47,10 @@ categories:
   </div>
 <% } %>
 ```
+> 参考链接 https://hexo.io/zh-cn/docs/variables.html#%E9%A1%B5%E9%9D%A2%E5%8F%98%E9%87%8F
+
+![](http://q68vqxb8c.bkt.clouddn.com/2020_02_25_hexo-bo-ke-da-jian/20200228015431168.png)
+
 ### 附录
 >[HexoEditor](https://github.com/zhuzhuyule/HexoEditor)
 >[https://moeditor.js.org/](https://moeditor.js.org/)

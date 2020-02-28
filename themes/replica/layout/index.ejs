@@ -1,7 +1,7 @@
 <%
 var posts = page.posts.data;
 <!-- var recentPosts = page.posts.sort('date',-1).data.slice(0, 50); -->
-var recentPosts = page.posts.sort('date',-1).limit(50);
+var recentPosts = page.posts.sort('updated', -1).limit(20)
 %>
 
 <div class="container-lg">
