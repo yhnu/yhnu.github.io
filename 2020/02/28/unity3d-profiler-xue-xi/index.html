@@ -8,12 +8,12 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>
-    博客使用7牛云同步 | Yhnu&#39;s Blog
+    Unity3D_Profiler学习 | Yhnu&#39;s Blog
   </title>
   <meta name="description" content="微信18675586478">
   
   <meta name="keywords" content="
-  Blog,七牛
+  Unity3D
   ">
   
   <meta name="author" content="易罗阳">
@@ -135,31 +135,17 @@
           <i class="fa fa-pencil-square-o"></i>
       
       <!-- {{moment(1582819200000).fromNow()}} -->
-      2020年02月28日 11:10:52
+      2020年02月28日 03:28:03
     </span>
   </h3>
 
   <article class="post-content">
-    <h1>博客使用7牛云同步</h1>
-    <blockquote>
-<p>使用7牛云进行Blog同步</p>
-<a id="more"></a>
-</blockquote>
-<h3 id="0x01-原因"><a href="#0x01-原因" class="headerlink" title="0x01: 原因"></a>0x01: 原因</h3><p>当我把博客使用github page时,打开网页经常会很慢. 作为静态网页这很不正常,平时经常使用7牛云的免费空间,基本能满足</p>
-<p>我的使用需求,因此尝试使用7牛云的对象存储服务进行网站存储.</p>
-<h3 id="0x02-Github-Action"><a href="#0x02-Github-Action" class="headerlink" title="0x02:  Github Action"></a>0x02:  Github Action</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">7Niu</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">        <span class="string">chmod</span> <span class="string">+x</span> <span class="string">./qiniu/qshell</span></span><br><span class="line">        <span class="string">./qiniu/qshell</span> <span class="string">account</span> <span class="string">xxxx</span> <span class="string">yyyy</span> <span class="string">7niu</span></span><br><span class="line">        <span class="string">./qiniu/qshell</span> <span class="string">qupload</span> <span class="string">./qiniu/sync.conf</span></span><br></pre></td></tr></table></figure>
+    <h1>Unity3D_Profiler学习</h1>
+    <h3 id="内存基础信息显示"><a href="#内存基础信息显示" class="headerlink" title="内存基础信息显示"></a>内存基础信息显示</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ProfilerWindow.cs</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">DrawOverviewText</span>(<span class="params">ProfilerArea? area</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!area.HasValue)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="comment">//显示对应的基础数据信息</span></span><br><span class="line">    <span class="keyword">string</span> activeText = ProfilerDriver.GetOverviewText(area.Value, GetActiveVisibleFrameIndex());</span><br><span class="line">    Debug.Log(activeText);</span><br><span class="line">    <span class="keyword">float</span> height = EditorStyles.wordWrappedLabel.CalcHeight(GUIContent.Temp(activeText), position.width);</span><br><span class="line"></span><br><span class="line">    m_PaneScroll[(<span class="keyword">int</span>)area] = GUILayout.BeginScrollView(m_PaneScroll[(<span class="keyword">int</span>)area], Styles.background);</span><br><span class="line">    EditorGUILayout.SelectableLabel(activeText, EditorStyles.wordWrappedLabel, GUILayout.MinHeight(height));</span><br><span class="line">    GUILayout.EndScrollView();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://q68vqxb8c.bkt.clouddn.com/2020_02_28_unity3d-profiler-xue-xi/20200228030546612.png" alt="内存相关数据信息获取"><br><img src="http://q68vqxb8c.bkt.clouddn.com/2020_02_28_unity3d-profiler-xue-xi/20200228031228709.png" alt="GPU相关数据信息获取"><br>注意: 此接口包含所有模块的基础信息</p>
+<h3 id="底层接口数据获取"><a href="#底层接口数据获取" class="headerlink" title="底层接口数据获取"></a>底层接口数据获取</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ProfilerHistory.cpp</span></span><br><span class="line"><span class="comment">// ProfilerArea : 对应数据类型CPU,GPU还是其他</span></span><br><span class="line"><span class="comment">// frame        : 对应那一帧的数据</span></span><br><span class="line"><span class="comment">//                -1 对应最后一帧的数据</span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">ProfilerHistory::GetOverviewTextForProfilerArea</span><span class="params">(ProfilerArea profilerArea, <span class="keyword">int</span> frame)</span></span></span><br></pre></td></tr></table></figure>
 
-<h3 id="0x03-全部使用了相对路径"><a href="#0x03-全部使用了相对路径" class="headerlink" title="0x03: 全部使用了相对路径"></a>0x03: 全部使用了相对路径</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"src_dir"</span>: <span class="string">"public"</span>,</span><br><span class="line">    <span class="attr">"bucket"</span>: <span class="string">"yhnu"</span>,</span><br><span class="line">    <span class="attr">"overwrite"</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="0x04-手动编译并上传"><a href="#0x04-手动编译并上传" class="headerlink" title="0x04: 手动编译并上传"></a>0x04: 手动编译并上传</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 上传</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hugo &amp;&amp; ./qiniu/qshell.exe qupload sync.conf</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 本地上传</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> rm -rf .qshell/qupload/ &amp;&amp; hugo &amp;&amp; ./qiniu/qshell.exe qupload sync.conf -L</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="0x05-刷新CDN"><a href="#0x05-刷新CDN" class="headerlink" title="0x05:刷新CDN"></a>0x05:刷新CDN</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ./qiniu/qshell.exe cdnrefresh -i file.list</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="0x06-fix图片路径"><a href="#0x06-fix图片路径" class="headerlink" title="0x06:fix图片路径"></a>0x06:fix图片路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 使用typora编辑器</span></span><br><span class="line">sed 's;".*/image;"image;' index.html -i</span><br><span class="line"><span class="meta">#</span><span class="bash"> 目录查找替换</span></span><br><span class="line">grep -rl 'src=".*/image-' public/posts/ | xargs sed -i 's;src=".*/image-;src="image-;g'</span><br><span class="line">find public -type f -exec sed -i -e 's;".*/image;"image;g'</span><br></pre></td></tr></table></figure>
-
-<h3 id="0x07-一条命令搞定它"><a href="#0x07-一条命令搞定它" class="headerlink" title="0x07:一条命令搞定它"></a>0x07:一条命令搞定它</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hugo &amp;&amp; grep -rl 'src=".*/image-' public/posts/ | xargs sed -i 's;src=".*/image-;src="image-;g' &amp;&amp; rm -rf .qshell/qupload &amp;&amp; ./qiniu/qshell.exe qupload sync.conf -L</span><br></pre></td></tr></table></figure>
-
-<h3 id="links"><a href="#links" class="headerlink" title="links:"></a>links:</h3><p><a href="https://stackoverflow.com/questions/6758963/find-and-replace-with-sed-in-directory-and-sub-directories" target="_blank" rel="noopener">https://stackoverflow.com/questions/6758963/find-and-replace-with-sed-in-directory-and-sub-directories</a></p>
+<h3 id="使用底层接口实时获取内存和显卡数据帮助数据分析"><a href="#使用底层接口实时获取内存和显卡数据帮助数据分析" class="headerlink" title="使用底层接口实时获取内存和显卡数据帮助数据分析"></a>使用底层接口实时获取内存和显卡数据帮助数据分析</h3><p>todo</p>
 
   </article>
 </div>

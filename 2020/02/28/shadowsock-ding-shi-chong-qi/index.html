@@ -90,7 +90,7 @@
         <a href="/archives" class="header-toolbar-left"><i
                   class="fa fa-file-text"></i> Posts </a>
         <a href="/archives"
-           class="header-toolbar-right"> 18 </a>
+           class="header-toolbar-right"> 19 </a>
       </li>
       <li>
         <a href="/tags" class="header-toolbar-left"><i
@@ -135,7 +135,7 @@
           <i class="fa fa-pencil-square-o"></i>
       
       <!-- {{moment(1582819200000).fromNow()}} -->
-      2020年02月28日 11:18:54
+      2020年02月28日 04:09:31
     </span>
   </h3>
 
@@ -160,36 +160,7 @@
 <h2 id="0x04-使用crontab实现每天重启"><a href="#0x04-使用crontab实现每天重启" class="headerlink" title="0x04: 使用crontab实现每天重启"></a>0x04: 使用crontab实现每天重启</h2><p>每天23:59分重启服务</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">59 23 * * * killall ss-server &amp;&amp; port=`date +"%m%d"` &amp;&amp; /var/lib/snapd/snap/bin/shadowsocks-libev.ss-server -s 0.0.0.0 -p $port -k 2019$port -m aes-256-cfb -u --no-delay &gt; /var/log/libev_2019$port.log  2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
 
-<h2 id="0x05-测试"><a href="#0x05-测试" class="headerlink" title="0x05: 测试"></a>0x05: 测试</h2><p>```shell</p>
-<ul>
-<li><ul>
-<li><ul>
-<li><ul>
-<li><ul>
-<li>root killall ss-server &amp;&amp; port=<code>date +&quot;%H%M&quot;</code> &amp;&amp; /var/lib/snapd/snap/bin/shadowsocks-libev.ss-server -s 0.0.0.0 -p $port -k 2019$port -m aes-256-cfb -u –no-delay &gt; /var/log/libev_2019$port.log  2&gt;&amp;1 &amp;</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><ul>
-<li><ul>
-<li><ul>
-<li><ul>
-<li>echo <code>date</code> &gt;&gt; /var/log/test_2019<code>date +&quot;%H%M&quot;</code>.log  2&gt;&amp;1 &amp;</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
+<h2 id="0x05-测试"><a href="#0x05-测试" class="headerlink" title="0x05: 测试"></a>0x05: 测试</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* * * * * root killall ss-server &amp;&amp; port=`date +"%H%M"` &amp;&amp; /var/lib/snapd/snap/bin/shadowsocks-libev.ss-server -s 0.0.0.0 -p $port -k 2019$port -m aes-256-cfb -u --no-delay &gt; /var/log/libev_2019$port.log  2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">* * * * * echo `date` &gt;&gt; /var/log/test_2019`date +"%H%M"`.log  2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
   </article>
 </div>
 
