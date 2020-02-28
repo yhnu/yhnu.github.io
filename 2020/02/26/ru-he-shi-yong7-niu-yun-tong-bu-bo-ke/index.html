@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    如何使用7牛云同步博客 | Yhnu&#39;s Blog
+  </title>
+  <meta name="description" content="微信18675586478">
+  
+  <meta name="keywords" content="
+  
+  ">
+  
+  <meta name="author" content="易罗阳">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+  
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">This website</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/archives">Archives</a></li>
+        
+        
+        <li><a href="/categories">Categories</a></li>
+        
+        
+        <li><a href="/tags">Tags</a></li>
+        
+        
+        <li class="desktop-only"><a href="/atom.xml" target="_blank">RSS</a></li>
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="http://q68vqxb8c.bkt.clouddn.com/2020_02_27_shu-mei-pai-shi-yong-zhi-nan/20200228122216265.png"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/archives" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/archives"
+           class="header-toolbar-right"> 18 </a>
+      </li>
+      <li>
+        <a href="/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/tags"
+           class="header-toolbar-right"> 8 </a>
+      </li>
+      <li>
+        <a href="/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/categories"
+           class="header-toolbar-right"> 8 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/">Yhnu&#39;s Blog</a>
+      
+      
+    </h2>
+  </div>
+
+  <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div>
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    易罗阳
+
+    <span class="post-date float-right" title="{{moment(1582646400000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      
+          <i class="fa fa-pencil-square-o"></i>
+      
+      {{moment(1582646400000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>如何使用7牛云同步博客</h1>
+    <h3 id="0x01-原因"><a href="#0x01-原因" class="headerlink" title="0x01: 原因"></a>0x01: 原因</h3><p>当我把博客使用github page时,打开网页经常会很慢. 作为静态网页这很不正常,平时经常使用7牛云的免费空间,基本能满足</p>
+<p>我的使用需求,因此尝试使用7牛云的对象存储服务进行网站存储.</p>
+<h3 id="0x02-Github-Action"><a href="#0x02-Github-Action" class="headerlink" title="0x02:  Github Action"></a>0x02:  Github Action</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">7Niu</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">        <span class="string">chmod</span> <span class="string">+x</span> <span class="string">./qiniu/qshell</span></span><br><span class="line">        <span class="string">./qiniu/qshell</span> <span class="string">account</span> <span class="string">xxxx</span> <span class="string">yyyy</span> <span class="string">7niu</span></span><br><span class="line">        <span class="string">./qiniu/qshell</span> <span class="string">qupload</span> <span class="string">./qiniu/sync.conf</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="0x03-全部使用了相对路径"><a href="#0x03-全部使用了相对路径" class="headerlink" title="0x03: 全部使用了相对路径"></a>0x03: 全部使用了相对路径</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"src_dir"</span>: <span class="string">"public"</span>,</span><br><span class="line">    <span class="attr">"bucket"</span>: <span class="string">"yhnu"</span>,</span><br><span class="line">    <span class="attr">"overwrite"</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="0x04-手动编译并上传"><a href="#0x04-手动编译并上传" class="headerlink" title="0x04: 手动编译并上传"></a>0x04: 手动编译并上传</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 上传</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hugo &amp;&amp; ./qiniu/qshell.exe qupload sync.conf</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 本地上传</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> rm -rf .qshell/qupload/ &amp;&amp; hugo &amp;&amp; ./qiniu/qshell.exe qupload sync.conf -L</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="0x05-刷新CDN"><a href="#0x05-刷新CDN" class="headerlink" title="0x05:刷新CDN"></a>0x05:刷新CDN</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ./qiniu/qshell.exe cdnrefresh -i file.list</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="0x06-fix图片路径"><a href="#0x06-fix图片路径" class="headerlink" title="0x06:fix图片路径"></a>0x06:fix图片路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 使用typora编辑器</span></span><br><span class="line">sed 's;".*/image;"image;' index.html -i</span><br><span class="line"><span class="meta">#</span><span class="bash"> 目录查找替换</span></span><br><span class="line">grep -rl 'src=".*/image-' public/posts/ | xargs sed -i 's;src=".*/image-;src="image-;g'</span><br><span class="line">find public -type f -exec sed -i -e 's;".*/image;"image;g'</span><br></pre></td></tr></table></figure>
+
+<h3 id="0x07-一条命令搞定它"><a href="#0x07-一条命令搞定它" class="headerlink" title="0x07:一条命令搞定它"></a>0x07:一条命令搞定它</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hugo &amp;&amp; grep -rl 'src=".*/image-' public/posts/ | xargs sed -i 's;src=".*/image-;src="image-;g' &amp;&amp; rm -rf .qshell/qupload &amp;&amp; ./qiniu/qshell.exe qupload sync.conf -L</span><br></pre></td></tr></table></figure>
+
+<h3 id="links"><a href="#links" class="headerlink" title="links:"></a>links:</h3><p><a href="https://stackoverflow.com/questions/6758963/find-and-replace-with-sed-in-directory-and-sub-directories" target="_blank" rel="noopener">https://stackoverflow.com/questions/6758963/find-and-replace-with-sed-in-directory-and-sub-directories</a></p>
+
+  </article>
+</div>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="/js/md5.min.js"></script>
+<div class='container' id="gitalk-container"></div>
+<script>
+    var gitalk = new Gitalk({
+        clientID: 'fd02d66fb0bc52bdd7db',
+        clientSecret: 'c00e8d42eaf7f9c05386740c122a3c995c2e038d',
+        repo: 'yhnu.github.io',
+        owner: 'yhnu',
+        admin: ['yhnu'],
+        distractionFreeMode: true,
+        id: md5(location.pathname)
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="yhnu.github.io" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2019 易罗阳</li>
+      <li><a href="yhnu.github.io">Home</a></li>
+      
+      <li><a href="https://github.com/yhnu" target="_blank" rel="noopener">Github</a></li>
+      
+      <li><a href="http://weibo.com/206663121" target="_blank" rel="noopener">Weibo</a></li>
+      
+    </ul>
+    <div class="footer-theme-info">
+      Theme <a href="//github.com/sabrinaluo/hexo-theme-replica" target="_blank" rel="noopener">Replica</a>
+      by <a href="//github.com/sabrinaluo" target="_blank" rel="noopener">Hiitea</a> ❤ Powered by Hexo
+    </div>
+    </div>
+    
+  </footer>
+</div>
+
+
+
+
+<script src="/js/main.js"></script>
+
+</body>
+</html>
