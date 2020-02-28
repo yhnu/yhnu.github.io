@@ -1,12 +1,9 @@
 ---
 title: Docker在Flask上的部署
-date: 2020-02-25 22:06:50
-tags: 
-    Docker
-categories:
-    Docker
-description:
-    'Docker问题记录'
+date: 2020-02-28 09:06:50
+tags: [Docker]
+categories: [Docker]
+description: Docker问题记录
 ---
 
 ### 0x01 前言:

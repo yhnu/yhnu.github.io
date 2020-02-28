@@ -1,7 +1,7 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
-categories:
+tags: [未分类]
+categories: [未分类]
 description: {{ title }}
 ---
