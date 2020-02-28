@@ -53,3 +53,4 @@ killall ss-server && port=`date +"%m%d"` && /var/lib/snapd/snap/bin/shadowsocks-
 * * * * * root killall ss-server && port=`date +"%H%M"` && /var/lib/snapd/snap/bin/shadowsocks-libev.ss-server -s 0.0.0.0 -p $port -k 2019$port -m aes-256-cfb -u --no-delay > /var/log/libev_2019$port.log  2>&1 &
 
 * * * * * echo `date` >> /var/log/test_2019`date +"%H%M"`.log  2>&1 &
+```
