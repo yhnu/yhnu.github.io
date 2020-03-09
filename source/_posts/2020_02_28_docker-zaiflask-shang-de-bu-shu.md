@@ -78,6 +78,14 @@ shell:
 ```shell
 docker rmi $(docker images --filter "dangling=true" -q)
 ```
+### 时区设置Docker
+2020-3-9 14:42:37
+Docker内需要设置时区才能时间一致
+```
+RUN apk --no-cache add tzdata  && \
+    ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+    echo "Asia/Shanghai" > /etc/timezone 
+```
 
 ### 附录
 [http://www.docker.org.cn/dockerppt/110.html](http://www.docker.org.cn/dockerppt/110.html)

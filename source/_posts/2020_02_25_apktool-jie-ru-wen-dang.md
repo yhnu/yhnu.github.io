@@ -49,5 +49,26 @@ curl -H "Content-Type:application/json" -X POST --data "{\"tag\":\"tgac_trunk\",
 使用如下命令
 ```shell
 curl -H "Content-Type:application/json" -X POST --data "{\"tag\":\"tgac_trunk\",\"buildnumber\":103}" http://10.11.67.39:7777/assetstop
+```
 
+### 3.模块统计与查询
+说明: 
+1. 所有数据查询使用正则表达式匹配, 数据未作缓存匹配数据较多时会比较慢
+2. 针对模块设置,不会做单条更新,做全局更新
+---
+
+1.查询功能
+
+```shell
+curl -H "Content-Type:application/json" -X POST --data "{\"tag\":\"jxsj2\",\"buildnumber\":1001, \"query\":\"Maps\"}" http://10.11.67.39:7777/modlequery
+```
+
+2.获取模块设置对应的参数
+```
+ curl -H "Content-Type:application/json" -X POST --data "{\"tag\":\"jxsj2\"}" http://10.11.67.39:7777/modulesetting/get
+```
+
+3.设置模块设置对应的参数(注:使用命令行不能传递中文)
+```
+ curl -H "Content-Type:application/json" -X POST --data "{\"tag\":\"jxsj2\", \"data\": [{\"name\":\"Maps\", \"regex\":\"Maps\"}]}" http://10.11.67.39:7777/modulesetting/set
 ```
