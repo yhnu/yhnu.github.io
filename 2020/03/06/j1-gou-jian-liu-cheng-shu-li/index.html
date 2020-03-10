@@ -8,12 +8,12 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>
-    Android投屏技术研究 | Yhnu&#39;s Blog
+    j1_构建流程梳理 | Yhnu&#39;s Blog
   </title>
   <meta name="description" content="微信18675586478">
   
   <meta name="keywords" content="
-  
+  Unity3D
   ">
   
   <meta name="author" content="易罗阳">
@@ -130,21 +130,23 @@
     <i class="fa fa-user-o"></i>
     易罗阳
 
-    <span class="post-date float-right" title="{{moment(1582646400000).format('MMM DD, YYYY, h:mm:ss A')}}">
+    <span class="post-date float-right" title="{{moment(1583424000000).format('MMM DD, YYYY, h:mm:ss A')}}">
       
           <i class="fa fa-pencil-square-o"></i>
       
-      <!-- {{moment(1582646400000).fromNow()}} -->
-      2020年02月27日 09:32:53
+      <!-- {{moment(1583424000000).fromNow()}} -->
+      2020年03月06日 02:44:00
     </span>
   </h3>
 
   <article class="post-content">
-    <h1>Android投屏技术研究</h1>
-    <h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><blockquote>
-<p><a href="https://github.com/yunbotouping/-" target="_blank" rel="noopener">https://github.com/yunbotouping/-</a></p>
-</blockquote>
+    <h1>j1_构建流程梳理</h1>
+    <h3 id="1-清理XLUA生成的Wrap文件"><a href="#1-清理XLUA生成的Wrap文件" class="headerlink" title="1. 清理XLUA生成的Wrap文件"></a>1. 清理XLUA生成的Wrap文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[INFO]清理目录 F:&#x2F;55jx1&#x2F;app&#x2F;build_workspace&#x2F;trunk&#x2F;jxp-artwork\JxPocket&#x2F;Assets&#x2F;XLua&#x2F;Gen</span><br></pre></td></tr></table></figure>
 
+<h3 id="2-清理JNI构建-并生成libclient-scene-so"><a href="#2-清理JNI构建-并生成libclient-scene-so" class="headerlink" title="2. 清理JNI构建,并生成libclient_scene.so"></a>2. 清理JNI构建,并生成libclient_scene.so</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">清理目录 F:&#x2F;55jx1&#x2F;app&#x2F;build_workspace&#x2F;trunk&#x2F;jxp-artwork\cpp&#x2F;lib&#x2F;android</span><br><span class="line">移除文件 F:&#x2F;55jx1&#x2F;app&#x2F;build_workspace&#x2F;trunk&#x2F;jxp-code&#x2F;cpp&#x2F;client_scene&#x2F;libs&#x2F;armeabi-v7a&#x2F;libclient_scene.so</span><br><span class="line">ndk-build.cmd clean</span><br><span class="line">ndk-build.cmd NDK_DEBUG&#x3D;0</span><br></pre></td></tr></table></figure>
+<p><img src="http://q68vqxb8c.bkt.clouddn.com/2020_03_06_j1-gou-jian-liu-cheng-shu-li/20200306114233705.png" alt=""><br><img src="http://q68vqxb8c.bkt.clouddn.com/2020_03_06_j1-gou-jian-liu-cheng-shu-li/20200306024346762.png" alt=""></p>
+<h3 id="3-切换到安卓平台"><a href="#3-切换到安卓平台" class="headerlink" title="3. 切换到安卓平台"></a>3. 切换到安卓平台</h3><h3 id="4-生成XLUA生成的Warp文件"><a href="#4-生成XLUA生成的Warp文件" class="headerlink" title="4. 生成XLUA生成的Warp文件"></a>4. 生成XLUA生成的Warp文件</h3><h3 id="5-打包AssetBundle"><a href="#5-打包AssetBundle" class="headerlink" title="5. 打包AssetBundle"></a>5. 打包AssetBundle</h3><h3 id="6-打包配置文件"><a href="#6-打包配置文件" class="headerlink" title="6. 打包配置文件"></a>6. 打包配置文件</h3><p>里面使用到了FilePakerC.exe目前不知道是做什么用的</p>
+<h3 id="7-生成APK"><a href="#7-生成APK" class="headerlink" title="7. 生成APK"></a>7. 生成APK</h3>
   </article>
 </div>
 

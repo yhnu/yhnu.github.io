@@ -8,12 +8,12 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>
-    Android投屏技术研究 | Yhnu&#39;s Blog
+    mongodb使用指南 | Yhnu&#39;s Blog
   </title>
   <meta name="description" content="微信18675586478">
   
   <meta name="keywords" content="
-  
+  Mongodb
   ">
   
   <meta name="author" content="易罗阳">
@@ -130,20 +130,22 @@
     <i class="fa fa-user-o"></i>
     易罗阳
 
-    <span class="post-date float-right" title="{{moment(1582646400000).format('MMM DD, YYYY, h:mm:ss A')}}">
+    <span class="post-date float-right" title="{{moment(1583683200000).format('MMM DD, YYYY, h:mm:ss A')}}">
       
           <i class="fa fa-pencil-square-o"></i>
       
-      <!-- {{moment(1582646400000).fromNow()}} -->
-      2020年02月27日 09:32:53
+      <!-- {{moment(1583683200000).fromNow()}} -->
+      2020年03月09日 03:12:26
     </span>
   </h3>
 
   <article class="post-content">
-    <h1>Android投屏技术研究</h1>
-    <h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><blockquote>
-<p><a href="https://github.com/yunbotouping/-" target="_blank" rel="noopener">https://github.com/yunbotouping/-</a></p>
-</blockquote>
+    <h1>mongodb使用指南</h1>
+    <h3 id="更改配置-etc-mongo-conf开启安全认证"><a href="#更改配置-etc-mongo-conf开启安全认证" class="headerlink" title="更改配置/etc/mongo.conf开启安全认证"></a>更改配置/etc/mongo.conf开启安全认证</h3><p><img src="http://q68vqxb8c.bkt.clouddn.com/2020_03_09_mongod-shi-yong-zhi-nan/20200309030245642.png" alt=""></p>
+<h3 id="先创建超级用户"><a href="#先创建超级用户" class="headerlink" title="先创建超级用户"></a>先创建超级用户</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.createUser(&#123;user:'root',pwd:'root',roles: [&#123;role:'root',db:'admin'&#125;]&#125;)&#125;)</span><br><span class="line">开启安全认证</span><br><span class="line">use flask</span><br><span class="line">db.createUser(&#123;user:'admin',pwd:'admin',roles: [&#123;role:'readWrite',db:'flask'&#125;]&#125;)&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="flask使用Mongo"><a href="#flask使用Mongo" class="headerlink" title="flask使用Mongo"></a>flask使用Mongo</h3><p>user:<a href="mailto:password@10.11.67.39">password@10.11.67.39</a>:27017/flask</p>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p>db.dropUser(“username”)</p>
 
   </article>
 </div>

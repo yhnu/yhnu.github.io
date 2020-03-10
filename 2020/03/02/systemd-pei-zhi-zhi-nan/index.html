@@ -90,19 +90,19 @@
         <a href="/archives" class="header-toolbar-left"><i
                   class="fa fa-file-text"></i> Posts </a>
         <a href="/archives"
-           class="header-toolbar-right"> 22 </a>
+           class="header-toolbar-right"> 25 </a>
       </li>
       <li>
         <a href="/tags" class="header-toolbar-left"><i
                   class="fa fa-tags"></i> Tags </a>
         <a href="/tags"
-           class="header-toolbar-right"> 12 </a>
+           class="header-toolbar-right"> 14 </a>
       </li>
       <li>
         <a href="/categories" class="header-toolbar-left"><i
                   class="fa fa-folder-open"></i> Categories </a>
         <a href="/categories"
-           class="header-toolbar-right"> 12 </a>
+           class="header-toolbar-right"> 14 </a>
       </li>
     </ul>
     <h2 class="header-title">
@@ -135,13 +135,17 @@
           <i class="fa fa-pencil-square-o"></i>
       
       <!-- {{moment(1583078400000).fromNow()}} -->
-      2020年03月02日 10:21:35
+      2020年03月09日 02:37:33
     </span>
   </h3>
 
   <article class="post-content">
     <h1>SystemD配置指南</h1>
-    
+    <h3 id="使用框架为quick-systemd"><a href="#使用框架为quick-systemd" class="headerlink" title="使用框架为quick_systemd"></a>使用框架为quick_systemd</h3><p><a href="https://www.npmjs.com/package/quick_systemd" target="_blank" rel="noopener">https://www.npmjs.com/package/quick_systemd</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>npm install quick_systemd</p>
+<p>sudo quick-systemd –add –settings service.json<br>sudo quick-systemd –remove –service my-service</p>
+<h3 id="使用配置的方式"><a href="#使用配置的方式" class="headerlink" title="使用配置的方式"></a>使用配置的方式</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"gitea"</span>,</span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">"an amazing service gitea"</span>,</span><br><span class="line">  <span class="attr">"cwd"</span>: <span class="string">"/otp"</span>,</span><br><span class="line">  <span class="attr">"user"</span>: <span class="string">"root"</span>,</span><br><span class="line">  <span class="attr">"group"</span>: <span class="string">"rot"</span>,</span><br><span class="line">  <span class="attr">"app"</span>: <span class="string">"gitea web"</span>,</span><br><span class="line">  <span class="attr">"logrotate"</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
   </article>
 </div>
 
