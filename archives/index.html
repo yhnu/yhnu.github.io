@@ -151,7 +151,7 @@
     <li class="">
       <a href="/">Overview</a></li>
     <li class="selected">
-      <a href="/archives">Posts <span class="counter">25</span></a>
+      <a href="/archives">Posts <span class="counter">27</span></a>
     </li>
     <li class="">
       <a href="/categories">Categories <span
@@ -163,6 +163,110 @@
 
     <div class="body-secondary">
       <ul class="archive-list">
+        
+        <li class="archive-list-item">
+          <h2><a href="/2020/03/20/ugui-yuan-ma-bi-ji/">UGUI源码笔记</a></h2>
+          <p>
+               前言  最近一段时间,忙着自动化工具的落地及其对应项目优化工作,暂且从源码级别分析下UGUI来避免后期项目的一些采坑情况 
+   UGUI源码结构  UGUI核心模块分为4大类. 
+ 
+ UI事件系统 
+ UI布局 
+ UI裁剪 
+ UI合批,重建 
+ 
+   UI事件系统  
+  输入处理 ...
+          </p>
+          <ul class="tag-list clearfix">
+            
+            <li class="tag-list-item"><a href="/tags/%E6%9C%AA%E5%88%86%E7%B1%BB/">未分类</a></li>
+            
+          </ul>
+          <div class="post-info">
+            <span>
+              
+              <a class="category-link" href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"><i class="fa fa-folder-open"></i> 未分类</a>
+              
+            </span>
+            <span><i class="fa fa-tag"></i> 1 </span>
+            <span>Published {{moment(1584633600000).fromNow()}}</span>
+          </div>
+        </li>
+        
+        <li class="archive-list-item">
+          <h2><a href="/2020/03/20/kautomator-kai-fa-bi-ji/">KAutomator开发笔记</a></h2>
+          <p>
+               性能采集工具需要获取/sdcard/ubox权限  AndroidManifest.xml中开启如下权限 
+      1        &amp;lt; application    android:requestLegacyExternalStorage = &#34;true&#34;         ...
+          </p>
+          <ul class="tag-list clearfix">
+            
+            <li class="tag-list-item"><a href="/tags/%E6%9C%AA%E5%88%86%E7%B1%BB/">未分类</a></li>
+            
+          </ul>
+          <div class="post-info">
+            <span>
+              
+              <a class="category-link" href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"><i class="fa fa-folder-open"></i> 未分类</a>
+              
+            </span>
+            <span><i class="fa fa-tag"></i> 1 </span>
+            <span>Published {{moment(1584633600000).fromNow()}}</span>
+          </div>
+        </li>
+        
+        <li class="archive-list-item">
+          <h2><a href="/2020/02/28/shadowsock-ding-shi-chong-qi/">ShadowSock_定时重启</a></h2>
+          <p>
+             
+ Outline ShadowSock Client 
+ 
+  
+
+   0x01: 下载地址       1       https://github.com/Jigsaw-Code/outline-client.git       
+   0x02:  环境配置  安装killall命令 
+...
+          </p>
+          <ul class="tag-list clearfix">
+            
+            <li class="tag-list-item"><a href="/tags/ShadowSocks/">ShadowSocks</a></li>
+            
+          </ul>
+          <div class="post-info">
+            <span>
+              
+              <a class="category-link" href="/categories/ShadowSocks/"><i class="fa fa-folder-open"></i> ShadowSocks</a>
+              
+            </span>
+            <span><i class="fa fa-tag"></i> 1 </span>
+            <span>Published {{moment(1582819200000).fromNow()}}</span>
+          </div>
+        </li>
+        
+        <li class="archive-list-item">
+          <h2><a href="/2020/02/25/apktool-jie-ru-wen-dang/">APKTool接入文档</a></h2>
+          <p>
+               1. 构建机 API V2对应接入文档  
+ 第一步：上传APK到文件中转站 
+ 
+      1       curl -X POST -F &#34;file=@./xxxx.file&#34; http://10.11.67.39:8888/uploadfile       
+ 
+ 第二步：上传Bund...
+          </p>
+          <ul class="tag-list clearfix">
+            
+          </ul>
+          <div class="post-info">
+            <span>
+              
+              <i class="fa fa-folder-open"></i> Uncategorized
+              
+            </span>
+            <span><i class="fa fa-tag"></i> 0 </span>
+            <span>Published {{moment(1582560000000).fromNow()}}</span>
+          </div>
+        </li>
         
         <li class="archive-list-item">
           <h2><a href="/2020/03/10/vuepres-kuai-su-bian-xie-wen-dang/">VuePress快速编写文档</a></h2>
@@ -259,30 +363,6 @@
         </li>
         
         <li class="archive-list-item">
-          <h2><a href="/2020/02/25/apktool-jie-ru-wen-dang/">APKTool接入文档</a></h2>
-          <p>
-               1. 构建机 API V2对应接入文档  
- 第一步：上传APK到文件中转站 
- 
-      1       curl -X POST -F &#34;file=@./xxxx.file&#34; http://10.11.67.39:8888/uploadfile       
- 
- 第二步：上传Bund...
-          </p>
-          <ul class="tag-list clearfix">
-            
-          </ul>
-          <div class="post-info">
-            <span>
-              
-              <i class="fa fa-folder-open"></i> Uncategorized
-              
-            </span>
-            <span><i class="fa fa-tag"></i> 0 </span>
-            <span>Published {{moment(1582560000000).fromNow()}}</span>
-          </div>
-        </li>
-        
-        <li class="archive-list-item">
           <h2><a href="/2020/03/06/j1-gou-jian-liu-cheng-shu-li/">j1_构建流程梳理</a></h2>
           <p>
                1. 清理XLUA生成的Wrap文件       1       [INFO]清理目录 F:&amp;#x2F;55jx1&amp;#x2F;app&amp;#x2F;build_workspace&amp;#x2F;trunk&amp;#x2F;jxp-artwork\JxPocket&amp;#x2F;Assets&amp;#x2F;XLua&amp;...
@@ -352,34 +432,6 @@
             </span>
             <span><i class="fa fa-tag"></i> 1 </span>
             <span>Published {{moment(1583078400000).fromNow()}}</span>
-          </div>
-        </li>
-        
-        <li class="archive-list-item">
-          <h2><a href="/2020/02/28/shadowsock-ding-shi-chong-qi/">ShadowSock_定时重启</a></h2>
-          <p>
-             
- Outline ShadowSock Client 
- 
-  
-
-   0x01: 下载地址       1       https://github.com/Jigsaw-Code/outline-client.git       
-   0x02:  环境配置  安装killall命令 
-...
-          </p>
-          <ul class="tag-list clearfix">
-            
-            <li class="tag-list-item"><a href="/tags/ShadowSocks/">ShadowSocks</a></li>
-            
-          </ul>
-          <div class="post-info">
-            <span>
-              
-              <a class="category-link" href="/categories/ShadowSocks/"><i class="fa fa-folder-open"></i> ShadowSocks</a>
-              
-            </span>
-            <span><i class="fa fa-tag"></i> 1 </span>
-            <span>Published {{moment(1582819200000).fromNow()}}</span>
           </div>
         </li>
         

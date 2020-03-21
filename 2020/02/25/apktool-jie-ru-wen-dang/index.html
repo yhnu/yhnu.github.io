@@ -90,7 +90,7 @@
         <a href="/archives" class="header-toolbar-left"><i
                   class="fa fa-file-text"></i> Posts </a>
         <a href="/archives"
-           class="header-toolbar-right"> 25 </a>
+           class="header-toolbar-right"> 27 </a>
       </li>
       <li>
         <a href="/tags" class="header-toolbar-left"><i
@@ -135,7 +135,7 @@
           <i class="fa fa-pencil-square-o"></i>
       
       <!-- {{moment(1582560000000).fromNow()}} -->
-      2020年03月07日 09:35:39
+      2020年03月11日 07:16:53
     </span>
   </h3>
 
@@ -177,6 +177,10 @@
 
 <p>3.设置模块设置对应的参数(注:使用命令行不能传递中文)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -H &quot;Content-Type:application&#x2F;json&quot; -X POST --data &quot;&#123;\&quot;tag\&quot;:\&quot;jxsj2\&quot;, \&quot;data\&quot;: [&#123;\&quot;name\&quot;:\&quot;Maps\&quot;, \&quot;regex\&quot;:\&quot;Maps\&quot;&#125;]&#125;&quot; http:&#x2F;&#x2F;10.11.67.39:7777&#x2F;modulesetting&#x2F;set</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-数据库查询"><a href="#4-数据库查询" class="headerlink" title="4.数据库查询"></a>4.数据库查询</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">db.getCollection('jxsj2_1001_bundle').aggregate([&#123;$unwind : "$assets"&#125;, &#123;$match : &#123; "assets.path": &#123; $regex: 'dll'&#125;&#125;&#125;])  </span><br><span class="line"></span><br><span class="line">db.getCollection('jxsj2_1001_apk').aggregate( [ &#123; $group: &#123; _id: null, compressed: &#123; $sum: "$compressed" &#125;,uncompress: &#123; $sum: "$uncompress" &#125; &#125; &#125; ] );</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-APK模块查询"><a href="#5-APK模块查询" class="headerlink" title="5.APK模块查询"></a>5.APK模块查询</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">^assets\/bin\/Data\/Managed\/.*\.dll$,^assets\/bin\/Data\/Managed\/.*\.mdb$,lib,mp4,bnk,xj,txt</span><br><span class="line"></span><br><span class="line">uiatlaslevel</span><br></pre></td></tr></table></figure>
   </article>
 </div>
 
