@@ -135,7 +135,7 @@
           <i class="fa fa-pencil-square-o"></i>
       
       <!-- {{moment(1584633600000).fromNow()}} -->
-      2020年03月21日 05:42:46
+      2020年03月21日 06:33:30
     </span>
   </h3>
 
@@ -190,6 +190,28 @@
 <p>简单说说把,就是先进行布局的更新,该在那个位置,好好的给我排好. 然后就是裁剪啦,该裁剪掉的给我裁剪掉, 颜色该变化的给我变换掉.然后就解决了我们刚才遇到的问题.</p>
 <p>布局这部分呢?人家是分了三步走的, PreLayout, Layout and PostLayout</p>
 <p>图像Rebuild呢人家分了两步走的. PreRender and LatePreRender</p>
+<p><strong>为啥要分步骤呢?</strong><br>有些有些要先计算,有些要后计算啊~<br>To do this, Unity UI sorts the list of dirty Layout components by their depth in the hierarchy. Items higher in the hierarchy (i.e. with fewer parent Transforms) are moved to the front of the list.</p>
+<p>图像Rebuild部分,主要是顶点数据的改变和材质数据的改变.此步骤不需要排序.</p>
+<h3 id="如何通过工具优化"><a href="#如何通过工具优化" class="headerlink" title="如何通过工具优化"></a>如何通过工具优化</h3><ol>
+<li>Unity Profiler</li>
+<li>Unity Frame Debugger</li>
+<li>Xcode’s Instruments or Intel VTune</li>
+<li>Xcode’s Frame Debugger or Intel GPA</li>
+</ol>
+<p><img src="http://q68vqxb8c.bkt.clouddn.com/2020_03_20_ugui_yuan_ma_bi_ji/20200321060623711.png" alt=""></p>
+<h3 id="实战分析"><a href="#实战分析" class="headerlink" title="实战分析"></a>实战分析</h3><p>这就是我们所说的合并批次,同事也告知了对应的原因.GameObject也能够让你直接看到是谁引发的.<br><img src="http://q68vqxb8c.bkt.clouddn.com/2020_03_20_ugui_yuan_ma_bi_ji/20200321061906314.png" alt=""></p>
+<p><img src="http://q68vqxb8c.bkt.clouddn.com/2020_03_20_ugui_yuan_ma_bi_ji/20200321062914923.png" alt=""></p>
+<p>目标:</p>
+<ol>
+<li>我们需要做的事情就是查清楚,能不能获得更少的合并批次的次数.</li>
+<li>我们也可以修改引擎代码,继续每个界面打开对应的Batches和Vertices数据.</li>
+</ol>
+<p>总结:</p>
+<ol>
+<li>优化是一门学问,别没事儿瞎几把优化.找到关键的问题点儿,需要达到4两拨千金的效果</li>
+<li>多从源码和官网寻找答案.没啥比这两个更加权威</li>
+<li>谦虚,谦虚,谦虚</li>
+</ol>
 
   </article>
 </div>
