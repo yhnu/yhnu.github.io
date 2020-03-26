@@ -8,12 +8,12 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>
-    VuePress快速编写文档 | Yhnu&#39;s Blog
+    记录一次Update内产生GcAlloc的优化 | Yhnu&#39;s Blog
   </title>
   <meta name="description" content="微信18675586478">
   
   <meta name="keywords" content="
-  VUE
+  未分类
   ">
   
   <meta name="author" content="易罗阳">
@@ -130,24 +130,20 @@
     <i class="fa fa-user-o"></i>
     易罗阳
 
-    <span class="post-date float-right" title="{{moment(1583769600000).format('MMM DD, YYYY, h:mm:ss A')}}">
+    <span class="post-date float-right" title="{{moment(1585152000000).format('MMM DD, YYYY, h:mm:ss A')}}">
       
           <i class="fa fa-pencil-square-o"></i>
       
-      <!-- {{moment(1583769600000).fromNow()}} -->
-      2020年03月10日 10:21:27
+      <!-- {{moment(1585152000000).fromNow()}} -->
+      2020年03月26日 10:57:28
     </span>
   </h3>
 
   <article class="post-content">
-    <h1>VuePress快速编写文档</h1>
-    <h3 id="简单3步快速编写文档"><a href="#简单3步快速编写文档" class="headerlink" title="简单3步快速编写文档"></a>简单3步快速编写文档</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改package-json"><a href="#修改package-json" class="headerlink" title="修改package.json"></a>修改package.json</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",</span><br><span class="line">    "dev": "vuepress dev . --open",</span><br><span class="line">    "build": "vuepress build ."</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://q68vqxb8c.bkt.clouddn.com/2020_03_10_vuepres_kuai_su_bian_xie_wen_dang/20200310101904094.png" alt=""></p>
-<h3 id="编写Readme-md"><a href="#编写Readme-md" class="headerlink" title="编写Readme.md"></a>编写Readme.md</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---</span><br><span class="line">home: true</span><br><span class="line"># heroImage: &#x2F;hero.png</span><br><span class="line">description: Unity3D包体分析,就是如此简单</span><br><span class="line">actionText: 快速查看Demo →</span><br><span class="line">actionLink: &#x2F;</span><br><span class="line">features:</span><br><span class="line">- title: 三步接入</span><br><span class="line">  details: 使用CURL常用命令行,无需所谓的接入脚本,无需开发环境</span><br><span class="line">- title: 分析全面</span><br><span class="line">  details: 高效分析安装包内文件占比及大小,让你一眼发现有问题的资源</span><br><span class="line">- title: 多维展示</span><br><span class="line">  details: 前端多维数据展示,帮助发现问题资源.配合UResourceTool服用效果更佳</span><br><span class="line">footer: MIT Licensed | Copyright © 2020-present by yhnu</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">### 快速接入文档(可手动上传)</span><br><span class="line">&#96;&#96;&#96;shell</span><br><span class="line">第一步：上传APK到文件中转站</span><br><span class="line"></span><br><span class="line">curl -X POST -F &quot;file&#x3D;@.&#x2F;apk_path&quot; http:&#x2F;&#x2F;10.11.67.39:8888&#x2F;uploadfile</span><br><span class="line"></span><br><span class="line">第二步：上传Bundle文件到文件中转站</span><br><span class="line"></span><br><span class="line">curl -X POST -F &quot;file&#x3D;@.&#x2F;buildlog_path&quot; http:&#x2F;&#x2F;10.11.67.39:8888&#x2F;uploadfile</span><br><span class="line"></span><br><span class="line">第三步: 上传json信息到服务器</span><br><span class="line"></span><br><span class="line">curl -H &quot;Content-Type:application&#x2F;json&quot; -X POST --data &#39;&#123;&quot;apkurl&quot;:&quot;apk_name&quot;,&quot;bundle&quot;:&quot;buildlog_name&quot;, &quot;time&quot;:&quot;上传时间标记:2020-03-02 22:30&quot;, &quot;buildnumber&quot;:&quot;构建序列比如:1001&quot; &quot;tag&quot;:&quot;应用程序tag比如:jx3m_trunk&quot;&#125;&#39; http:&#x2F;&#x2F;10.11.67.39:8888&#x2F;uploadurl</span><br></pre></td></tr></table></figure>
-<h3 id="运行查看结果"><a href="#运行查看结果" class="headerlink" title="运行查看结果"></a>运行查看结果</h3><p><img src="http://q68vqxb8c.bkt.clouddn.com/2020_03_10_vuepres_kuai_su_bian_xie_wen_dang/20200310102113081.png" alt=""></p>
-
+    <h1>记录一次Update内产生GcAlloc的优化</h1>
+    <p>最近针对某款游戏做了一次内GC分配查看器.发现Update下面产生了GC.<br><img src="/2020_03_26_ji_lu_yi_ciupdate_nei_chan_shenggcalloc_de_you_hua/20200326103953079.png" alt=""></p>
+<p>我们先看一下InputModule.Update()函数</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Update 内循环调用了如下函数</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">KeyboardHotkeyDebug</span>(<span class="params">TouchHotKey.KE_HOTKEY_KEYCODE_CHECK_TYPE eCheckType</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> lstHotkey = ListPool&lt;TouchHotKey&gt;.Get();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s_lstHotKey.Count; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">var</span> cHotKey = s_lstHotKey[i];</span><br><span class="line">        <span class="keyword">if</span> (cHotKey.IsPass(eCheckType))</span><br><span class="line">        &#123;</span><br><span class="line">            lstHotkey.Add(cHotKey); <span class="comment">//此Add操作产生了GC</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   </article>
 </div>
 
