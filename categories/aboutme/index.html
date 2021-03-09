@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-	<meta name="generator" content="Hugo 0.81.0" />
     <meta charset="utf-8">
     <link crossorigin="anonymous" media="all"
         rel="stylesheet"
@@ -10,7 +9,7 @@
         rel="stylesheet" href="https://yhnu.github.io/css/github.css" />
     <meta name="viewport" content="width=device-width">
 
-    <title>GitHub Style</title>
+    <title>aboutme - GitHub Style</title>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://yhnu.github.io/images/favicon.ico">
     <meta name="theme-color" content="#1e2327">
@@ -193,12 +192,15 @@ if (!doNotTrack) {
 
 
 <div class="col-lg-9 col-md-8 col-12 float-md-left pl-md-2">
-    <div class="UnderlineNav width-full user-profile-nav js-sticky top-0">
+    <div class="UnderlineNav width-full user-profile-nav top-0 is-placeholder"
+        style="visibility: hidden; display: none; height: 56px;"></div>
+    <div class="UnderlineNav width-full user-profile-nav js-sticky top-0"
+        style="position: static; top: 0px; left: 330.5px; width: 911.5px;">
         <nav class="UnderlineNav-body" data-pjax aria-label="User profile">
-            <a aria-current="page" class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 selected " href="https://yhnu.github.io/">
+            <a aria-current="page" class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://yhnu.github.io/">
                 Overview
             </a>
-            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://yhnu.github.io/posts/">
+            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 selected" href="https://yhnu.github.io/posts/">
                 Posts
                 <span class="Counter hide-lg hide-md hide-sm">
                     16
@@ -209,181 +211,57 @@ if (!doNotTrack) {
             </a>
         </nav>
     </div>
-    <div class="position-relative">
-        <div class="mt-4">
-            <div class="js-pinned-items-reorder-container">
-                <h2 class="f4 mb-2 text-normal">
-                    Pinned
-                </h2>
 
-                <ol class="d-flex flex-wrap list-style-none gutter-condensed mb-4 js-pinned-items-reorder-list">
-                    
-                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-                        <div
-                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
-                            <div class="pinned-item-list-item-content" name="pinned-post">
-                                <div class="d-flex width-full flex-items-center position-relative">
-                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
-                                        version="1.1" width="12" height="16" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
-                                    </svg>
-                                    <a href="https://yhnu.github.io/posts/2020-02-25docker-flask-apktool/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="2020-02-25Docker_Flask_APKTool">2020-02-25Docker_Flask_APKTool</span>
-                                    </a>
-                                </div>
-                                0x01:Docker 磁盘映射
-                                <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2020-02-24"
-                                        class="no-wrap" title="Modify at 2020/02/24">
-                                        February 24, 2020</relative-time>
-                                </div>
-                            </div>
+    <div class="position-relative">
+        <div id="user-repositories-list">
+            <ul data-filterable-for="your-repos-filter" data-filterable-type="substring">
+                
+                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
+                    <div class="col-12 col-lg-12 d-inline-block">
+                        <div class="d-inline-block mb-1">
+                            <h3>
+                                <a href="https://yhnu.github.io/about/">aboutme</a>
+                            </h3>
                         </div>
-                    </li>
-                    
-                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-                        <div
-                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
-                            <div class="pinned-item-list-item-content" name="pinned-post">
-                                <div class="d-flex width-full flex-items-center position-relative">
-                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
-                                        version="1.1" width="12" height="16" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
-                                    </svg>
-                                    <a href="https://yhnu.github.io/posts/unity3d_android_memleak/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="Unity3D Dictionary Memory Leak">Unity3D Dictionary Memory Leak</span>
-                                    </a>
-                                </div>
-                                <blockquote>
-<p>Unity3D构建32位安卓应用,使用Dictionary会产生内存泄漏</p>
-</blockquote>
-                                <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2019-12-31"
-                                        class="no-wrap" title="Modify at 2019/12/31">
-                                        December 31, 2019</relative-time>
-                                </div>
-                            </div>
+
+                        <div name="posts-post">
+                            why yhnu? i&rsquo;m a vim user, just like hjkl very effectly. i want to type less so named with yhnu
+about me just a worker like you
+1. 时隔7年,回头探望才觉自己就是那个&lt;钱钟书&gt;笔下的那个方鸿渐.
+在大学就读期间,在我哥哥的帮助下我比其他同龄人提早学习了一年的计算机相关的知识.这给我在大学期间意气风发,狠狠的提供了一笔不小 的资本.
+2009年, 大学第一年,我获得了每科的都是优的成绩,拿到了国家奖学金 2010年, 大学第二年,在其他人还在学习&laquo;电路&raquo;等基础知识的时候,我已经开启去参加&laquo;全国电子设计大赛&raquo; 2011年, 大学第三年,在丰富自己的学识之余,只要是有电子相关的领域的竞赛,我都会和队员一起参加 2012年, 大学第四年,已更加纯熟的经验,第二次参加&laquo;全国电子设计大赛&raquo;
+在校期间,我参加了很多的比赛,为老师和学校争取了一些荣誉;任何一门领域的知识都是浩瀚的,因此我大学4年基本翻遍了图书馆内所有的电子 领域相关的书籍,同时我哥哥也会把市面上使用的一些技术在暑假的时候传授于我.
+智慧之眼的快速生根发芽并茁壮成长,像一辆飞驰的火车碾压而过.让我活得顺风顺水,因此我满心以为我毕业后通过我的学识一定能获得好的工作 于是我愚昧的放弃了那些所谓的大学考研的想法.
+2. 在求职的道路上,智慧之眼失效了??
+2012年10月, 我便满怀信心的开启了自己的求职之路
+最初,我在招聘网站上投递了自己的简历,目的只想试试自己到底值多少钱? 可这终究归于失败了,因为他们只想要一个努力工作但不要工资的大学生罢了
+2012年12月, 我参加了很多次校招笔试
+OH MY GOD,我发现自己碰壁了,面试题目刁钻得要命,我写的代码也从来没这么难过.简单一句话,那些题目并不是为了实际工程经验而诞生,现在看来 只不过是面试官在那里秀秀技术,茴香豆的茴字有多少种写法罢了.
+2013年1月, 碰壁回炉重造一个月
+有的人专门写了本书专门讲述了茴香豆的茴字有多少种写法.这本书名字叫&laquo;程序员面试宝典&raquo;. 拿着这本书我踏入了后面所有企业的面试环节~但是我 迄今都不知道这本书的真正的意义是什么.
+后续更多精彩, 快吃饭了.先更新到此
+work history 2013~2014 搜狐畅游科技有限公司
+2015~2018 深圳腾讯科技有限公司
+2018~now 珠海金山网络科技有限公司
                         </div>
-                    </li>
-                    
-                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-                        <div
-                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
-                            <div class="pinned-item-list-item-content" name="pinned-post">
-                                <div class="d-flex width-full flex-items-center position-relative">
-                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
-                                        version="1.1" width="12" height="16" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
-                                    </svg>
-                                    <a href="https://yhnu.github.io/posts/hugo_themes/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="Hugo themes">Hugo themes</span>
-                                    </a>
-                                </div>
-                                <blockquote>
-<p>my hugo themes</p>
-</blockquote>
-                                <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2019-12-24"
-                                        class="no-wrap" title="Modify at 2019/12/24">
-                                        December 24, 2019</relative-time>
-                                </div>
-                            </div>
+
+                        <div class="f6 text-gray mt-2">
+                            Updated <relative-time datetime="2019-12-13" class="no-wrap"
+                                title="Modifyd at 2019/12/13">
+                                December 13, 2019</relative-time>
                         </div>
-                    </li>
-                    
-                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-                        <div
-                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
-                            <div class="pinned-item-list-item-content" name="pinned-post">
-                                <div class="d-flex width-full flex-items-center position-relative">
-                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
-                                        version="1.1" width="12" height="16" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
-                                    </svg>
-                                    <a href="https://yhnu.github.io/posts/unity3diostexture/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="How Unity3D Texture Upload To GPU Rendering">How Unity3D Texture Upload To GPU Rendering</span>
-                                    </a>
-                                </div>
-                                <blockquote>
-<p>ios unity3d texture note</p>
-</blockquote>
-                                <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2019-12-13"
-                                        class="no-wrap" title="Modify at 2019/12/13">
-                                        December 13, 2019</relative-time>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-                        <div
-                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
-                            <div class="pinned-item-list-item-content" name="pinned-post">
-                                <div class="d-flex width-full flex-items-center position-relative">
-                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
-                                        version="1.1" width="12" height="16" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
-                                    </svg>
-                                    <a href="https://yhnu.github.io/posts/iosinstruments/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="Ios Instruments Note">Ios Instruments Note</span>
-                                    </a>
-                                </div>
-                                <blockquote>
-<p>ios instruments note</p>
-</blockquote>
-                                <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2019-12-13"
-                                        class="no-wrap" title="Modify at 2019/12/13">
-                                        December 13, 2019</relative-time>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-                        <div
-                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
-                            <div class="pinned-item-list-item-content" name="pinned-post">
-                                <div class="d-flex width-full flex-items-center position-relative">
-                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
-                                        version="1.1" width="12" height="16" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
-                                    </svg>
-                                    <a href="https://yhnu.github.io/posts/googlecloud_crontab_shadowsock/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="在GoogleCloud上部署ShadowSock服务">在GoogleCloud上部署ShadowSock服务</span>
-                                    </a>
-                                </div>
-                                <blockquote>
-<p>Outline ShadowSock Client</p>
-</blockquote>
-                                <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2019-12-13"
-                                        class="no-wrap" title="Modify at 2019/12/13">
-                                        December 13, 2019</relative-time>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                </ol>
-            </div>
+                    </div>
+                </li>
+                
+            </ul>
+            
         </div>
-        <div id="pinned-items-modal-wrapper"></div>
     </div>
-</div>
 </div>
 
 
     </main>
 </div>
-
 
   <div class="footer container-lg width-full p-responsive" role="contentinfo">
     <div
