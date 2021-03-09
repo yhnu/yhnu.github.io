@@ -67,6 +67,10 @@ crontab并不支持`date +"%H%M`这种shell命令,因此需要把命令存储为
 #filename: ss.sh
 killall ss-server && port=`date +"%m%d"` && /var/lib/snapd/snap/bin/shadowsocks-libev.ss-server -s 0.0.0.0 -p 1$port -k 2020$port -m aes-256-cfb -u --no-delay > /var/log/libev_2019$port.log  2>&1 &
 ```
+```shell
+#filename: ss.sh
+killall brook11.bin && port=`date +"%m%d"` && /opt/brook11.bin ssserver --listen 0.0.0.0:1$port  --password 2020$port > /var/log/libev_2019$port.log  2>&1 &
+```
 
 ```shell
 #filename: crontab -e
